@@ -1,2 +1,4 @@
-*/*
-!*/Vagrantfile
+.DS_Store
+
+## Vagrant
+**/.vagrant
