@@ -1,0 +1,19 @@
+---
+- name: Install Longhorn Requirement Packages
+  hosts: all
+  remote_user: ubuntu
+  gather_facts: false
+  become: yes
+  tasks:
+  - name: Install packages
+    ansible.builtin.apt:
+      pkg:
+      - open-iscsi
+      - nfs-common
+      state: present
+      update_cache: yes
+  - name: Start open-iscsi service
+    ansible.builtin.service:
+      name: iscsid
+      state: started
+      enabled: yes
