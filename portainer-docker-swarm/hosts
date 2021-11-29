@@ -1,0 +1,3 @@
+[mycluster]
+master ansible_host=192.168.60.101
+worker ansible_host=192.168.60.102
